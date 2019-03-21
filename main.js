@@ -9,7 +9,7 @@ function randomValueFromArray(array){
 
 var storyText = 'It was :insertw: fahrenheit outside, so :insertx: went for a walk. When they got to :inserty:, they stared in horror for a few moments, then :insertz:. Bob saw the whole thing, but was not surprised — :insertx: weighs 300 pounds, and it was a hot day.';
 var insertW = [105,74,-10];
-var insertX = ['an elephant','Father Christmas','Frosty the Snowman','Donald Trump'];
+var insertX = ['an elephant','Father Christmas','Frosty the Snowman'];
 var insertY = ['the soup kitchen','Disneyland','the White House','the North Pole'];
 var insertZ = ['spontaneously combusted','melted into a puddle on the sidewalk','turned into a slug and crawled away'];
 
@@ -39,7 +39,7 @@ newStory = newStory.replace(':insertz:', zItem);
   }
 
   if(wItem <= 0) {
-    newStory = newStory.replace(zItem,'froze into a block of ice');
+    newStory = newStory.replace(zItem,'froze into a huge block of ice');
   }
 
  if (wItem >= 70 && wItem < 85 ){
@@ -49,21 +49,10 @@ newStory = newStory.replace(':insertz:', zItem);
  if (wItem >=70 && wItem < 85){
  	newStory = newStory.replace('hot','pleasant');
  }
- if (xItem == 'Donald Trump'){
- 	newStory = newStory.replace('they','he');
- }
- if (xItem == 'Donald Trump'){
- 	newStory = newStory.replace(yItem + ',','Capitol Building, he saw a picture of John MCain; ');
- }
 
- if (xItem == 'Donald Trump'){
- 	newStory = newStory.replace('they','he');
- }
-
- if (xItem == 'Donald Trump'){
- 	newStory = newStory.replace(zItem,'has a morbid obsession with John McCain');
- }
-
+if (xItem == 'an elephant'){
+  newStory = newStory.replace('300','12,000');
+}
   if(document.getElementById('uk').checked) {
     var weight = Math.round(300/14) + ' stone';
     var temperature =  Math.round((94-32) * 5 / 9) + ' degrees centigrade';
